@@ -52,6 +52,7 @@ Endpoints
   - Purpose: return current server time
   - Response: "Current time is <time>"
 
+<<<<<<< HEAD
 ## Day 4 – API Design & Data Handling
 
 Endpoints
@@ -67,3 +68,5 @@ Data Storage
 User data is stored in an in-memory array. Data resets when the server restarts.
 
 
+=======
+>>>>>>> 19119cdcfa513c11d6e9d3852befc4315c60cfe6
