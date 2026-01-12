@@ -87,3 +87,27 @@ User data is stored in an in-memory array. Data resets when the server restarts.
 **Outcome:**
 - Clean commit history
 - Pull request successfully created
+
+## Day 6 – React & Next.js Fundamentals
+
+**Focus:** Modern frontend structure using Next.js
+
+**Work Done**
+- Created a Next.js application using `create-next-app`
+- Used the Pages Router for file-based routing
+- Built three pages:
+  - Home (`/`)
+  - About (`/about`)
+  - Contact (`/contact`)
+- Created a reusable `Navbar` component and reused it across pages
+- Ran and tested the application locally using `npm run dev`
+
+**Key Learnings**
+- Understanding Next.js project structure
+- File-based routing using the `pages` directory
+- Creating and reusing React components
+- Basic frontend navigation using `next/link`
+
+**Outcome**
+- Fully working multi-page Next.js frontend
+- Clean and understandable frontend code structure
