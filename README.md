@@ -1,19 +1,19 @@
 # Intern Onboarding
 
 ## Day - 1
-Frontend vs Backend
+**Frontend vs Backend**
 
 Frontend is the part of a web application that users interact with directly, such as buttons, forms, and pages.
 Backend handles the logic, data processing, and communication with databases and servers.
 
-Request–Response Lifecycle
+**Request–Response Lifecycle**
 
 1. The browser sends a request to the server.
 2. The server receives and processes the request.
 3. The server sends a response back.
 4. The browser displays the response to the user.
 
-Example
+**Example**
 
 When a user opens a website, the browser requests the page, the server processes it, and the response is shown as a webpage.
 
@@ -25,11 +25,11 @@ using promises and async/await.
 
 ## Day 3 – Node.js & Express Basics
 
-What I built
+**What I built**
 
 A basic Express server with three GET endpoints to understand routes and request/response handling.
 
-How to run
+**How to run**
 
 1. Install dependencies
    npm install
@@ -38,7 +38,7 @@ How to run
 3. Open in browser
    http://localhost:3000
 
-Endpoints
+**Endpoints**
 
 - GET /health
   - Purpose: simple health check to confirm server is running
@@ -54,7 +54,7 @@ Endpoints
 
 ## Day 4 – API Design & Data Handling
 
-Endpoints
+**Endpoints**
 
 - POST /add-user  
   Adds a user using name and email sent as JSON.
@@ -62,7 +62,28 @@ Endpoints
 - GET /users  
   Returns all stored users.
 
-Data Storage
+**Data Storage**
 
 User data is stored in an in-memory array. Data resets when the server restarts.
 
+## Day 5 – Git Discipline
+
+**Focus:** Professional Git workflow
+
+**Work Done:**
+- Improved code readability using documentation comments
+- Worked on a feature branch instead of directly on the base branch
+
+**Key Learnings:**
+- Writing meaningful commit messages
+- Creating feature branches
+- Raising pull requests for code review
+
+**Implementation:**
+- Branch: `feature/refactor-readability`
+- One clean commit made
+- Pull request opened to `master` with no logic changes
+
+**Outcome:**
+- Clean commit history
+- Pull request successfully created
