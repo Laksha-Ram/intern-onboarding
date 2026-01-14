@@ -1,51 +1,34 @@
-const express = require("express");
-const app = express();
+import { useEffect, useState } from "react";
 
-app.use(express.json());
+export default function Home() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState("");
 
-let users = [];
+  useEffect(() => {
+    const base = process.env.NEXT_PUBLIC_API_BASE;
 
+    fetch(`${base}/health`) // <-- change this to your working endpoint
+      .then(async (res) => {
+        const text = await res.text();
+        try {
+          return JSON.parse(text); // if JSON
+        } catch {
+          return { raw: text }; // if plain text
+        }
+      })
+      .then((json) => setData(json))
+      .catch((err) => setError(err.message));
+  }, []);
 
-const PORT = 3000;
+  return (
+    <div style={{ padding: 24 }}>
+      <h1>Day 7: Frontend ↔ Backend Integration</h1>
 
-app.get("/health", (req, res) => {
-  res.send("Server is healthy ;) ");
-});
+      {error && <p style={{ color: "red" }}>Error: {error}</p>}
 
-app.get("/hello", (req, res) => {
-  res.send("Hello from my first Express server :) ");
-});
+      {!data && !error && <p>Loading...</p>}
 
-app.get("/time", (req, res) => {
-  const currentTime = new Date().toLocaleTimeString();
-  res.send(`Current time is ${currentTime}`);
-});
-
-app.post("/add-user", (req, res) => {
-  const { name, email } = req.body;
-
-  if (!name || !email) {
-    return res.status(400).json({ message: "name and email are required" });
-  }
-
-  const newUser = {
-    id: users.length + 1,
-    name,
-    email,
-  };
-
-  users.push(newUser);
-
-  return res.status(201).json({
-    message: "User added successfully",
-    user: newUser,
-  });
-});
-
-app.get("/users", (req, res) => {
-  return res.status(200).json(users);
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+    </div>
+  );
+}
