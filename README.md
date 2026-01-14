@@ -111,3 +111,24 @@ User data is stored in an in-memory array. Data resets when the server restarts.
 **Outcome**
 - Fully working multi-page Next.js frontend
 - Clean and understandable frontend code structure
+
+## Day 7 – Frontend & Backend Integration
+
+**What I worked on**
+- Integrated the Next.js frontend with the Express backend.
+- Connected the frontend to the backend `/health` API endpoint.
+
+**How the integration works**
+- The backend Express server runs on `http://localhost:5000`.
+- It exposes a `/health` endpoint that returns a status message.
+- The Next.js frontend runs on `http://localhost:3000`.
+- The frontend uses `fetch()` to call the backend API and display the response.
+
+**Key concepts learned**
+- Running frontend and backend as separate processes.
+- Client–server communication using HTTP.
+- Using environment variables (`NEXT_PUBLIC_API_BASE`) instead of hardcoding URLs.
+
+**Outcome**
+- Frontend successfully displays live data received from the backend API.
+
