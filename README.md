@@ -132,3 +132,19 @@ User data is stored in an in-memory array. Data resets when the server restarts.
 **Outcome**
 - Frontend successfully displays live data received from the backend API.
 
+## Day 8 – AWS Fundamentals (S3)
+
+Worked on understanding AWS at a high level and used Amazon S3 for static file hosting.
+
+### What I did
+- Created an AWS Free Tier account
+- Created an S3 bucket
+- Uploaded a static HTML file
+- Configured public access using a bucket policy
+- Verified access using a public URL
+
+### What I learned
+Amazon S3 is an object storage service that can be used to store and serve static files without managing any servers.
+
+### Live S3 URL
+https://laksha-day8-s3-demo.s3.ap-southeast-2.amazonaws.com/index.html
