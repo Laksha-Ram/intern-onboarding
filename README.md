@@ -1,4 +1,5 @@
 # Intern Onboarding
+TEST-README-UPDATE
 
 ## Day - 1
 **Frontend vs Backend**
@@ -148,3 +149,32 @@ Amazon S3 is an object storage service that can be used to store and serve stati
 
 ### Live S3 URL
 https://laksha-day8-s3-demo.s3.ap-southeast-2.amazonaws.com/index.html
+
+## Day 9 – Frontend Deployment (Vercel)
+
+### Objective
+Deploy the Next.js frontend application to Vercel and make it accessible via a production URL.
+
+### Work Done
+- Created and structured a Next.js frontend inside `Frontend-Next.js`
+- Implemented basic routing using `pages/`:
+  - `/` (Home)
+  - `/about`
+  - `/contact`
+- Added reusable `Navbar` component for navigation
+- Configured Vercel project with correct **Root Directory**
+- Resolved initial build and 404 issues caused by incorrect build context
+- Successfully deployed frontend to Vercel (Production)
+
+### Key Learnings
+- How Vercel handles monorepos and root directories
+- Importance of correct framework detection (Next.js)
+- Debugging build failures using Vercel Build Logs
+- Understanding 404 issues caused by misconfigured deployments
+
+### Deployment Link
+🔗 https://intern-onboarding-61x7.vercel.app/
+
+### Status
+Completed
+
