@@ -180,7 +180,7 @@ https://intern-onboarding-nu.vercel.app/
 - Verified backend accessibility using live endpoints
 
 **Live Backend API URL:**  
-intern-onboarding-production.up.railway.app/health
+https://intern-onboarding-production.up.railway.app/health
 
 ---
 
